@@ -1,4 +1,4 @@
-%% band_structure
+%% band_structure 
 %
 % script to caulculate band structure from simple tight-binding
 % Hamiltonians. Hamiltonians must be defined for each lattice. Variables of
@@ -229,7 +229,7 @@ if calculate_lattice && valid_lattice % check if following sections shall/can be
             end
             
         end
-        title("\theta = " + num2str(theta) + '°');
+        title("\theta = " + num2str(theta) + 'Â°');
         %     saveas(fig1, [num2str(nexp) 'lin' num2str(theta) '.png']);
     end
     
@@ -254,7 +254,7 @@ if calculate_lattice && valid_lattice % check if following sections shall/can be
     set(gca,'ytick',[-2*pi:pi:2*pi]) % where to set the tick marks
     set(gca,'yticklabels',{'-2\pi','-\pi','0','\pi','2\pi'},'FontSize',14) % give them user-defined labels
     view(83.862060314988838,2.092363018197072); %view(55,6); % viewing angle
-    title("\theta = " + num2str(theta) + '°');
+    title("\theta = " + num2str(theta) + 'Â°');
     xlabel("k_x/a")
     ylabel("k_y/a")
     zlabel("\beta_n [a.u.]")
@@ -398,7 +398,7 @@ if calculate_lattice && valid_lattice % check if following sections shall/can be
         contour(x,y,squeeze(ew(d,:,:)));
         pbaspect([1 1 1]);
         
-        title("\theta = " + num2str(theta) + '°');
+        title("\theta = " + num2str(theta) + 'Â°');
         xlabel("k_x/a")
         ylabel("k_y/a")
         set(get(gca,'YLabel'),'Rotation',0)
@@ -620,7 +620,7 @@ if calculate_ribbon && valid_ribbon % check if section shall/can be executed
     end
     
     figure('Name', 'ribbon band structure');
-    title(append("\theta = ", num2str(theta), "°"))
+    title(append("\theta = ", num2str(theta), "Â°"))
     % fullscreen();
     hold on
     box on
@@ -715,8 +715,8 @@ if calculate_floquet && valid_floquet % check if section shall/can be executed
     end
     pbaspect([1 1 1]);
     
-    title(['R=' num2str(R) ' m   ' 'Z=' num2str(Z) ' m   ' 'theta=' num2str(theta) '°   ' 'n=' num2str(nexp) ''])
-%     title(append("\theta = ", num2str(theta), "°"))
+    title(['R=' num2str(R) ' m   ' 'Z=' num2str(Z) ' m   ' 'theta=' num2str(theta) 'Â°   ' 'n=' num2str(nexp) ''])
+%     title(append("\theta = ", num2str(theta), "Â°"))
 %     title(append('R = ', num2str(R/a_f), " \cdot a"))
     % title(append('R = ', num2str(R/a), 'a'))
     hold off
